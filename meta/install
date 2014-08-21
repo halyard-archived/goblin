@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# Set up devices
+parted /dev/sda "mklabel msdos" "unit %" "mkpart primary 0 100"
+pvcreate /dev/sda1
+vgcreate vg1 /dev/sda1
+
+# Set up LVs
+lvcreate -L 6G -n root vg1
+lvcreate -L 1G -n swap vg1
+lvcreate -l 100%FREE -n data vg1
+mkfs.btrfs /dev/vg1/root
+mkswap /dev/vg1/swap
+mkfs.btrfs /dev/vg1/data
+
+# Mount devices
+mount /dev/vg1/root /mnt
+swapon /dev/vg1/swap
+
+# Bootstrap initial packages
+pacstrap /mnt base base-devel
+mkdir /mnt/srv/data
+mount /dev/vg1/data /mnt/srv/data
+genfstab -p /mnt >> /mnt/etc/fstab
+
+# Configure the new system
+echo "plikt" > /mnt/etc/hostname
+echo "127.0.0.1 plikt.a-rwx.org plikt" >> /mnt/etc/hosts
+ln -s /usr/share/zoneinfo/US/Eastern /mnt/etc/localtime
+sed -i 's/#\(en_US.UTF-8 UTF-8\)/\1/' /mnt/etc/locale.gen
+arch-chroot /mnt locale-gen
+echo "LANG='en_US.UTF-8'" > /mnt/etc/locale.conf
+
+

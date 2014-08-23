@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [ -n "$(lvs)" ] ; then
+    lvremove -f vg1/data vg1/swap vg1/root
+    vgremove vg1
+    pvremove /dev/sda1
+fi
+
 set -e
 
 echo 'Setting up devices'
@@ -11,9 +17,9 @@ echo 'Setting up LVs'
 lvcreate -L 6G -n root vg1
 lvcreate -L 1G -n swap vg1
 lvcreate -l 100%FREE -n data vg1
-mkfs.btrfs /dev/vg1/root
+mkfs.btrfs --force /dev/vg1/root
 mkswap /dev/vg1/swap
-mkfs.btrfs /dev/vg1/data
+mkfs.btrfs --force /dev/vg1/data
 
 echo 'Mounting devices'
 mount /dev/vg1/root /mnt

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Set up devices
 parted /dev/sda "mklabel msdos" "unit %" "mkpart primary 0 100"
 pvcreate /dev/sda1

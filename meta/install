@@ -3,7 +3,7 @@
 set -e
 
 echo 'Setting up devices'
-parted /dev/sda 'mklabel msdos' 'unit %' 'mkpart primary 0 100'
+parted -s /dev/sda 'mklabel msdos' 'unit %' 'mkpart primary 0 100'
 pvcreate /dev/sda1
 vgcreate vg1 /dev/sda1
 

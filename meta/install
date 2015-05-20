@@ -23,7 +23,7 @@ mount /dev/vg1/root /mnt
 swapon /dev/vg1/swap
 
 echo 'Bootstrapping initial packages'
-pacstrap /mnt base base-devel grub
+pacstrap /mnt base base-devel grub btrfs-progs
 mkdir /mnt/srv/data
 mount /dev/vg1/data /mnt/srv/data
 genfstab -p /mnt >> /mnt/etc/fstab

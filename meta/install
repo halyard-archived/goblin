@@ -11,9 +11,9 @@ pvcreate /dev/sda1
 vgcreate vg1 /dev/sda1
 
 echo 'Setting up LVs'
-lvcreate -L 6G -n root vg1
-lvcreate -L 1G -n swap vg1
-lvcreate -l 100%FREE -n data vg1
+lvcreate -L 6G -Wy -n root vg1
+lvcreate -L 1G -Wy -n swap vg1
+lvcreate -l 100%FREE -Wy -n data vg1
 mkfs.btrfs --force /dev/vg1/root
 mkswap /dev/vg1/swap
 mkfs.btrfs --force /dev/vg1/data

@@ -5,6 +5,16 @@ goblin
 
 Puppet configurations for my PXE server
 
+## Install
+
+To deploy a server with goblin, boot the [Arch installer](https://www.archlinux.org/download/) and run the following:
+
+```
+pacman -Sy git
+git clone git://github.com/halyard/goblin /opt/goblin
+/opt/goblin/meta/install
+```
+
 ## License
 
 These scripts and config files are released under the MIT License. See the bundled LICENSE file for details.

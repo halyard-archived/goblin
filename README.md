@@ -10,7 +10,7 @@ Puppet configurations for my PXE server
 To deploy a server with goblin, boot the [Arch installer](https://www.archlinux.org/download/) and run the following:
 
 ```
-pacman -Sy git
+pacman -Sy --noconfirm git
 git clone git://github.com/halyard/goblin /opt/goblin
 /opt/goblin/meta/install
 ```

@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-if [ -n "$(lvs)" ] ; then
-    lvremove -f vg1/data vg1/swap vg1/root
-    vgremove vg1
-    pvremove /dev/sda1
-fi
+[[ -n "$(vgs)" ]] && vgs --noheadings -o vg_name | xargs -n1 vgremove -f
+[[ -n "$(pvs)" ]] && pvs --noheadings -o pv_name | xargs -n1 pvremove -f
 
 set -e
 

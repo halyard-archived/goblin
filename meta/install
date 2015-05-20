@@ -28,8 +28,12 @@ mkdir /mnt/srv/data
 mount /dev/vg1/data /mnt/srv/data
 genfstab -p /mnt >> /mnt/etc/fstab
 
+echo 'Enabling lvm2 for mkinitcpio'
+sed -i 's/^HOOKS="base udev/& lvm2/' /mnt/etc/mkinitcpio.conf
+arch-chroot /mnt mkinitcpio -p linux
+
 echo 'Setting up GRUB'
-arch-chroot /mnt grub-install --target=i386-pc --recheck /dev/sda
+arch-chroot /mnt grub-install --recheck /dev/sda
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 
 echo 'Setting the password'

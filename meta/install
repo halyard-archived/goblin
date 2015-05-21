@@ -46,7 +46,7 @@ echo "Root password is $password" >> /mnt/etc/issue
 
 echo 'Bootstrap goblin'
 arch-chroot /mnt git clone git://github.com/halyard/goblin /opt/goblin
-cp /opt/goblin/meta/systemd/puppet-apply.service /etc/systemd/system/
-cp /opt/goblin/meta/systemd/puppet-apply.timer /etc/systemd/system/
-systemctl enable puppet-apply.timer
+cp /mnt/opt/goblin/meta/systemd/puppet-apply.service /mnt/etc/systemd/system/
+cp /mnt/opt/goblin/meta/systemd/puppet-apply.timer /mnt/etc/systemd/system/
+arch-chroot /mnt systemctl enable puppet-apply.timer
 

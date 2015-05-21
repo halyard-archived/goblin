@@ -41,7 +41,7 @@ arch-chroot /mnt systemctl enable dhcpcd
 
 echo 'Setting the password'
 password="$(head -c256 /dev/urandom | md5sum | head -c24)"
-echo "root:$passwd" | arch-chroot /mnt chpasswd
+echo "root:$password" | arch-chroot /mnt chpasswd
 echo "Root password is $password" >> /mnt/etc/issue
 
 echo 'Bootstrap goblin'

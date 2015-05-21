@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
+set -e
+
 [[ -n "$(vgs)" ]] && vgs --noheadings -o vg_name | xargs -n1 vgremove -f
 [[ -n "$(pvs)" ]] && pvs --noheadings -o pv_name | xargs -n1 pvremove -f
-
-set -e
 
 echo 'Setting up devices'
 parted -s /dev/sda 'mklabel msdos' 'unit %' 'mkpart primary 0 100'
@@ -23,7 +23,7 @@ mount /dev/vg1/root /mnt
 swapon /dev/vg1/swap
 
 echo 'Bootstrapping initial packages'
-pacstrap /mnt base base-devel grub btrfs-progs
+pacstrap /mnt base base-devel grub btrfs-progs puppet
 mkdir /mnt/srv/data
 mount /dev/vg1/data /mnt/srv/data
 genfstab -p /mnt >> /mnt/etc/fstab
@@ -36,6 +36,11 @@ echo 'Setting up GRUB'
 arch-chroot /mnt grub-install --recheck /dev/sda
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 
+echo 'Enabling initial networking'
+arch-chroot /mnt systemctl enable dhcpcd
+
 echo 'Setting the password'
-arch-chroot /mnt passwd
+password="$(head -c256 /dev/urandom | md5sum | head -c24)"
+echo "root:$passwd" | arch-chroot /mnt chpasswd
+echo "Root password is $password" >> /etc/issue
 

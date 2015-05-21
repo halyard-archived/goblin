@@ -23,7 +23,7 @@ mount /dev/vg1/root /mnt
 swapon /dev/vg1/swap
 
 echo 'Bootstrapping initial packages'
-pacstrap /mnt base base-devel grub btrfs-progs puppet
+pacstrap /mnt base base-devel grub btrfs-progs puppet git
 mkdir /mnt/srv/data
 mount /dev/vg1/data /mnt/srv/data
 genfstab -p /mnt >> /mnt/etc/fstab
@@ -45,7 +45,7 @@ echo "root:$password" | arch-chroot /mnt chpasswd
 echo "Root password is $password" >> /mnt/etc/issue
 
 echo 'Bootstrap goblin'
-git clone git://github.com/halyard/goblin /opt/goblin
+arch-chroot /mnt git clone git://github.com/halyard/goblin /opt/goblin
 cp /opt/goblin/meta/systemd/puppet-apply.service /etc/systemd/system/
 cp /opt/goblin/meta/systemd/puppet-apply.timer /etc/systemd/system/
 systemctl enable puppet-apply.timer

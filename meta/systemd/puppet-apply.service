@@ -1,0 +1,7 @@
+[Unit]
+Description=Run puppet
+
+[Service]
+Type=simple
+ExecStart=/opt/goblin/meta/run
+

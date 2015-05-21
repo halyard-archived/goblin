@@ -1,0 +1,10 @@
+[Unit]
+Description=Schedule puppet run
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1hour
+
+[Install]
+WantedBy=multi-user.target
+

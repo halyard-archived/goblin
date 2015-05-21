@@ -42,5 +42,11 @@ arch-chroot /mnt systemctl enable dhcpcd
 echo 'Setting the password'
 password="$(head -c256 /dev/urandom | md5sum | head -c24)"
 echo "root:$passwd" | arch-chroot /mnt chpasswd
-echo "Root password is $password" >> /etc/issue
+echo "Root password is $password" >> /mnt/etc/issue
+
+echo 'Bootstrap goblin'
+git clone git://github.com/halyard/goblin /opt/goblin
+cp /opt/goblin/meta/systemd/puppet-apply.service /etc/systemd/system/
+cp /opt/goblin/meta/systemd/puppet-apply.timer /etc/systemd/system/
+systemctl enable puppet-apply.timer
 

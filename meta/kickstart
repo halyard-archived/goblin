@@ -50,3 +50,5 @@ cp /mnt/opt/goblin/meta/systemd/puppet-apply.service /mnt/etc/systemd/system/
 cp /mnt/opt/goblin/meta/systemd/puppet-apply.timer /mnt/etc/systemd/system/
 arch-chroot /mnt systemctl enable puppet-apply.timer
 
+echo 'Rebooting'
+reboot

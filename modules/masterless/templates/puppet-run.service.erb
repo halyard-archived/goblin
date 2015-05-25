@@ -3,5 +3,5 @@ Description=Run puppet
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/puppet-run
+ExecStart=<%= "#{@bindir}/puppet-run" %>
 

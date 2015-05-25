@@ -1,0 +1,10 @@
+---
+:backends:
+  - yaml
+:hierarchy:
+  - "%{::clientcert}"
+  - "%{::environment}"
+  - common
+:yaml:
+  :datadir: /opt/goblin/hieradata
+

@@ -7,17 +7,17 @@ class masterless(
 ) {
     file { "$bindir/puppet-run":
         ensure => 'file',
-        source => template('puppet-run')
+        source => template('masterless/puppet-run')
     }
 
     file { '/etc/systemd/system/puppet-run.service':
         ensure => 'file',
-        source => template('puppet-run.service')
+        source => template('masterless/puppet-run.service')
     }
 
     file { '/etc/systemd/system/puppet-run.timer':
         ensure => 'file',
-        source => template('puppet-run.timer')
+        source => template('masterless/puppet-run.timer')
     }
 
     file { '/etc/systemd/system/multi-user.target.wants/puppet-run.timer':

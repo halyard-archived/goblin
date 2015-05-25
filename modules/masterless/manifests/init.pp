@@ -22,7 +22,7 @@ class masterless(
 
     file { '/etc/systemd/system/multi-user.target.wants/puppet-run.timer':
         ensure => 'link',
-        target => '/etc/systemd/system/puppet-run.timer'
+        target => '/etc/systemd/system/puppet-run.timer',
         require => File['/etc/systemd/system/puppet-run.timer']
     }
 }

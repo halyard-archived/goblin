@@ -1,11 +1,11 @@
 class masterless(
     $codedir = '/etc/puppetlabs/code',
-    $envdir = "$codedir/environments/production",
-    $modulepath = "$envdir/modules:$codedir/modules",
-    $manifestpath = "$envdir/manifests/site.pp",
+    $configpath = "${codedir}/conf/puppet.conf",
+    $envdir = "${codedir}/environments/production",
+    $manifestpath = "${envdir}/manifests/site.pp",
     $bindir = '/usr/local/bin'
 ) {
-    file { "$bindir/puppet-run":
+    file { "${bindir}/puppet-run":
         ensure => 'file',
         content => template('masterless/puppet-run.erb')
     }

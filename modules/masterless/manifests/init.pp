@@ -4,7 +4,7 @@ class masterless(
 ) {
     $configpath = "${codedir}/conf/puppet.conf"
     $envdir = "${codedir}/environments/production"
-    $manifestpath = "${envdir}/manifests/site.pp",
+    $manifestpath = "${envdir}/manifests/site.pp"
 
     file { "${bindir}/puppet-run":
         ensure => 'file',

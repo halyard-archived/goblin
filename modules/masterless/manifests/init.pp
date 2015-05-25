@@ -8,7 +8,8 @@ class masterless(
 
     file { "${bindir}/puppet-run":
         ensure => 'file',
-        content => template('masterless/puppet-run.erb')
+        content => template('masterless/puppet-run.erb'),
+        mode => '0644'
     }
 
     file { '/etc/systemd/system/puppet-run.service':

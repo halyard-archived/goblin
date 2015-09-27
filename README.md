@@ -2,6 +2,7 @@ goblin
 =========
 
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://tldrlegal.com/license/mit-license)
+[![Build Status](https://img.shields.io/circleci/project/halyard/goblin.svg)](https://circleci.com/gh/halyard/goblin)
 
 Puppet configurations for my PXE server
 

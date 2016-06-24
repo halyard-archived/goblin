@@ -7,19 +7,19 @@ GEM
     hiera (3.2.0)
       json_pure
     json_pure (1.8.3)
-    puppet (4.5.0)
+    puppet (4.5.2)
       CFPropertyList (~> 2.2.6)
       facter (> 2.0, < 4)
       hiera (>= 2.0, < 4)
       json_pure
-    puppet-lint (1.1.0)
+    puppet-lint (2.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   puppet (~> 4.5.0)
-  puppet-lint (~> 1.1.0)
+  puppet-lint (~> 2.0.0)
 
 BUNDLED WITH
    1.12.1

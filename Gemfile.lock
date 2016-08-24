@@ -30,12 +30,12 @@ GEM
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     multipart-post (2.0.0)
-    puppet (4.6.0)
+    puppet (4.6.1)
       CFPropertyList (~> 2.2.6)
       facter (> 2.0, < 4)
       hiera (>= 2.0, < 4)
       json_pure (~> 1.8)
-    puppet-lint (2.0.0)
+    puppet-lint (2.0.2)
     puppet-syntax (2.1.0)
       rake
     puppet_forge (2.2.2)
@@ -44,12 +44,11 @@ GEM
       gettext-setup (>= 0.3)
       minitar
       semantic_puppet (~> 0.1.0)
-    puppetlabs_spec_helper (1.1.1)
-      mocha
-      puppet-lint
-      puppet-syntax
-      rake
-      rspec-puppet
+    puppetlabs_spec_helper (1.2.1)
+      mocha (~> 1.0)
+      puppet-lint (~> 2.0)
+      puppet-syntax (~> 2.0)
+      rspec-puppet (~> 2.0)
     rake (11.2.2)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
@@ -79,7 +78,7 @@ DEPENDENCIES
   librarian-puppet (~> 2.2.0)
   puppet (~> 4.6.0)
   puppet-lint (~> 2.0.0)
-  puppetlabs_spec_helper (~> 1.1.0)
+  puppetlabs_spec_helper (~> 1.2.1)
 
 BUNDLED WITH
    1.12.1

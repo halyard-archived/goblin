@@ -32,9 +32,9 @@ GEM
       metaclass (~> 0.0.1)
     multipart-post (2.0.0)
     parallel (1.11.1)
-    parallel_tests (2.14.0)
+    parallel_tests (2.14.1)
       parallel
-    puppet (4.9.4)
+    puppet (4.10.0)
       CFPropertyList (~> 2.2.6)
       facter (> 2.0, < 4)
       gettext-setup (>= 0.10, < 1)
@@ -83,7 +83,7 @@ PLATFORMS
 
 DEPENDENCIES
   librarian-puppet (~> 2.2.0)
-  puppet (~> 4.9.0)
+  puppet (~> 4.10.0)
   puppet-lint (~> 2.2.1)
   puppetlabs_spec_helper (~> 2.1.0)
 

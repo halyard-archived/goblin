@@ -12,4 +12,3 @@ def hmod(name, version = nil, params = {})
 end
 
 hmod 'masterless', '0.1.4'
-hmod 'ssh', '3.0.1', org: 'saz'

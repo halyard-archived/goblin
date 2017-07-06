@@ -1,2 +1,6 @@
 ---
-masterless::codedir: '/opt/goblin'
+ssh::server_options:
+    Protocol: '2'
+    PasswordAuthentication: 'no'
+    PubkeyAuthentication: 'yes'
+

@@ -1,1 +1,2 @@
-include 'masterless'
+include masterless
+include ssh::server

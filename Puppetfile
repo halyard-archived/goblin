@@ -11,4 +11,4 @@ def hmod(name, version = nil, params = {})
   mod repo, version
 end
 
-hmod 'masterless', '0.1.3'
+hmod 'masterless', '0.1.4'

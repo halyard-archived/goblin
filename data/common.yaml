@@ -1,6 +1,2 @@
 ---
-ssh::server_options:
-    Protocol: '2'
-    PasswordAuthentication: 'no'
-    PubkeyAuthentication: 'yes'
-
+masterless::frequency: 5min

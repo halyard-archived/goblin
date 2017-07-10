@@ -1,2 +1,3 @@
 ---
 masterless::frequency: 5min
+logind::handlelinswitch: ignore

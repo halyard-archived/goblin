@@ -12,3 +12,4 @@ def hmod(name, version = nil, params = {})
 end
 
 hmod 'masterless', '0.1.11'
+hmod 'logind', '0.0.1'

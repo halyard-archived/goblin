@@ -6,5 +6,4 @@ node 'infra.a-rwx.org' {
 }
 
 node default {
-  fail('No node definition exists for this node')
 }

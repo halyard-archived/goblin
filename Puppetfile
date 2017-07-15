@@ -13,4 +13,4 @@ end
 
 hmod 'masterless', '0.1.11'
 hmod 'unifi', '0.0.1'
-hmod 'hostname', '0.0.9'
+hmod 'hostname', '0.0.10'

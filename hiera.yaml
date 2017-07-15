@@ -8,3 +8,5 @@ defaults:
 hierarchy:
 - name: "Common Settings"
   path: "common.yaml"
+- name: "MAC Specific Settings"
+  path: "mac/%{macaddress}.yaml"

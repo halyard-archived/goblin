@@ -1,7 +1,7 @@
 include masterless
 include hostname
 
-node 'infra.a-rwx.org' {
+node 'tower.a-rwx.org' {
   include unifi
 }
 

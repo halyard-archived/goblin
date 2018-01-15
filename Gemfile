@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'puppet', '~> 5.3.1'
-gem 'librarian-puppet', '~> 2.2.0'
+gem 'librarian-puppet', '~> 3.0.0'
 
 group :development do
   gem 'puppet-lint', '~> 2.3.0'

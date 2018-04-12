@@ -25,7 +25,7 @@ GEM
     locale (2.1.2)
     metaclass (0.0.4)
     minitar (0.6.1)
-    mocha (1.4.0)
+    mocha (1.5.0)
       metaclass (~> 0.0.1)
     multi_json (1.13.1)
     multipart-post (2.0.0)
@@ -35,7 +35,7 @@ GEM
       hiera (>= 3.2.1, < 4)
       locale (~> 2.1)
       multi_json (~> 1.10)
-    puppet-lint (2.3.3)
+    puppet-lint (2.3.5)
     puppet-syntax (2.4.1)
       rake
     puppet_forge (2.2.9)
@@ -44,12 +44,12 @@ GEM
       gettext-setup (~> 0.11)
       minitar
       semantic_puppet (~> 1.0)
-    puppetlabs_spec_helper (2.6.2)
+    puppetlabs_spec_helper (2.7.0)
       mocha (~> 1.0)
       puppet-lint (~> 2.0)
       puppet-syntax (~> 2.0)
       rspec-puppet (~> 2.0)
-    rake (12.3.0)
+    rake (12.3.1)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -77,7 +77,7 @@ DEPENDENCIES
   librarian-puppet (~> 3.0.0)
   puppet (~> 5.5.0)
   puppet-lint (~> 2.3.0)
-  puppetlabs_spec_helper (~> 2.6.1)
+  puppetlabs_spec_helper (~> 2.7.0)
 
 BUNDLED WITH
    1.16.1

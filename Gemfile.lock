@@ -15,7 +15,7 @@ GEM
       fast_gettext (~> 1.1.0)
       gettext (>= 3.0.2)
       locale
-    hiera (3.4.2)
+    hiera (3.4.3)
     librarian-puppet (3.0.0)
       librarianp (>= 0.6.3)
       puppet_forge (~> 2.1)
@@ -29,7 +29,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.13.1)
     multipart-post (2.0.0)
-    puppet (5.5.0)
+    puppet (5.5.1)
       facter (> 2.0.1, < 4)
       fast_gettext (~> 1.1.2)
       hiera (>= 3.2.1, < 4)
@@ -44,7 +44,7 @@ GEM
       gettext-setup (~> 0.11)
       minitar
       semantic_puppet (~> 1.0)
-    puppetlabs_spec_helper (2.7.0)
+    puppetlabs_spec_helper (2.8.0)
       mocha (~> 1.0)
       puppet-lint (~> 2.0)
       puppet-syntax (~> 2.0)
@@ -77,7 +77,7 @@ DEPENDENCIES
   librarian-puppet (~> 3.0.0)
   puppet (~> 5.5.0)
   puppet-lint (~> 2.3.0)
-  puppetlabs_spec_helper (~> 2.7.0)
+  puppetlabs_spec_helper (~> 2.8.0)
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

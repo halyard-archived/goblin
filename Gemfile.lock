@@ -44,7 +44,7 @@ GEM
       gettext-setup (~> 0.11)
       minitar
       semantic_puppet (~> 1.0)
-    puppetlabs_spec_helper (2.8.0)
+    puppetlabs_spec_helper (2.9.0)
       mocha (~> 1.0)
       puppet-lint (~> 2.0)
       puppet-syntax (~> 2.0)
@@ -62,7 +62,7 @@ GEM
     rspec-mocks (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
-    rspec-puppet (2.6.11)
+    rspec-puppet (2.6.12)
       rspec
     rspec-support (3.7.1)
     rsync (1.0.9)
@@ -77,7 +77,7 @@ DEPENDENCIES
   librarian-puppet (~> 3.0.0)
   puppet (~> 5.5.0)
   puppet-lint (~> 2.3.0)
-  puppetlabs_spec_helper (~> 2.8.0)
+  puppetlabs_spec_helper (~> 2.9.0)
 
 BUNDLED WITH
    1.16.2

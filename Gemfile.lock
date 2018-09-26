@@ -41,7 +41,7 @@ GEM
       puppet-resource_api (~> 1.5)
       semantic_puppet (~> 1.0)
     puppet-lint (2.3.6)
-    puppet-resource_api (1.5.0)
+    puppet-resource_api (1.6.0)
       hocon (>= 1.0)
     puppet-syntax (2.4.1)
       rake
@@ -51,7 +51,7 @@ GEM
       gettext-setup (~> 0.11)
       minitar
       semantic_puppet (~> 1.0)
-    puppetlabs_spec_helper (2.10.0)
+    puppetlabs_spec_helper (2.11.0)
       mocha (~> 1.0)
       puppet-lint (~> 2.0)
       puppet-syntax (~> 2.0)
@@ -84,7 +84,7 @@ DEPENDENCIES
   librarian-puppet (~> 3.0.0)
   puppet (~> 6.0.0)
   puppet-lint (~> 2.3.0)
-  puppetlabs_spec_helper (~> 2.10.0)
+  puppetlabs_spec_helper (~> 2.11.0)
 
 BUNDLED WITH
    1.16.3

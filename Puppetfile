@@ -11,6 +11,6 @@ def hmod(name, version = nil, params = {})
   mod repo, version
 end
 
-hmod 'masterless', '0.1.11'
+hmod 'masterless', '0.1.13'
 hmod 'unifi', '0.0.1'
 hmod 'hostname', '0.0.11'

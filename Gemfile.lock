@@ -32,7 +32,7 @@ GEM
     multi_json (1.13.1)
     multipart-post (2.0.0)
     pathspec (0.2.1)
-    puppet (6.2.0)
+    puppet (6.3.0)
       facter (> 2.0.1, < 4)
       fast_gettext (~> 1.1.2)
       hiera (>= 3.2.1, < 4)
@@ -44,7 +44,7 @@ GEM
     puppet-lint (2.3.6)
     puppet-resource_api (1.6.2)
       hocon (>= 1.0)
-    puppet-syntax (2.4.1)
+    puppet-syntax (2.4.3)
       rake
     puppet_forge (2.2.9)
       faraday (>= 0.9.0, < 0.14.0)
@@ -71,7 +71,7 @@ GEM
     rspec-mocks (3.8.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
-    rspec-puppet (2.7.2)
+    rspec-puppet (2.7.3)
       rspec
     rspec-support (3.8.0)
     rsync (1.0.9)
@@ -84,7 +84,7 @@ PLATFORMS
 
 DEPENDENCIES
   librarian-puppet (~> 3.0.0)
-  puppet (~> 6.2.0)
+  puppet (~> 6.3.0)
   puppet-lint (~> 2.3.0)
   puppetlabs_spec_helper (~> 2.13.0)
 

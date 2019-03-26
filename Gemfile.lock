@@ -32,7 +32,7 @@ GEM
     multi_json (1.13.1)
     multipart-post (2.0.0)
     pathspec (0.2.1)
-    puppet (6.3.0)
+    puppet (6.4.0)
       facter (> 2.0.1, < 4)
       fast_gettext (~> 1.1.2)
       hiera (>= 3.2.1, < 4)
@@ -52,7 +52,7 @@ GEM
       gettext-setup (~> 0.11)
       minitar
       semantic_puppet (~> 1.0)
-    puppetlabs_spec_helper (2.14.0)
+    puppetlabs_spec_helper (2.14.1)
       mocha (~> 1.0)
       pathspec (~> 0.2.1)
       puppet-lint (~> 2.0)
@@ -84,7 +84,7 @@ PLATFORMS
 
 DEPENDENCIES
   librarian-puppet (~> 3.0.0)
-  puppet (~> 6.3.0)
+  puppet (~> 6.4.0)
   puppet-lint (~> 2.3.0)
   puppetlabs_spec_helper (~> 2.14.0)
 

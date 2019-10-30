@@ -43,7 +43,7 @@ GEM
       multi_json (~> 1.10)
       puppet-resource_api (~> 1.5)
       semantic_puppet (~> 1.0)
-    puppet-lint (2.3.6)
+    puppet-lint (2.4.1)
     puppet-resource_api (1.8.7)
       hocon (>= 1.0)
     puppet-syntax (2.6.0)
@@ -87,7 +87,7 @@ PLATFORMS
 DEPENDENCIES
   librarian-puppet (~> 3.0.0)
   puppet (~> 6.10.1)
-  puppet-lint (~> 2.3.0)
+  puppet-lint (~> 2.4.1)
   puppetlabs_spec_helper (~> 2.14.0)
 
 BUNDLED WITH

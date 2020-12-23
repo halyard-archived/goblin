@@ -11,4 +11,4 @@ def hmod(name, version = nil, params = {})
   mod repo, version
 end
 
-hmod 'serverless', '0.2.0'
+hmod 'serverless', '0.2.1'

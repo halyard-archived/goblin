@@ -12,3 +12,4 @@ def hmod(name, version = nil, params = {})
 end
 
 hmod 'serverless', '0.2.1'
+hmod 'hostname', '0.1.0'

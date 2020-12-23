@@ -47,8 +47,8 @@ password="$(head -c256 /dev/urandom | md5sum | head -c24)"
 echo "root:$password" | arch-chroot /mnt chpasswd
 
 echo 'Bootstrap goblin'
-arch-chroot /mnt git clone --recurse-submodules https://github.com/halyard/goblin /opt/goblin
-arch-chroot /mnt /opt/goblin/meta/puppet-run
+curl -sLo https://git.io/halyard-kickstart /mnt/root/kickstart
+arch-chroot /mnt bash /root/kickstart
 
 echo 'Rebooting'
 reboot

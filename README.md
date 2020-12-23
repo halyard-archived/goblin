@@ -10,7 +10,7 @@ Puppet configurations for my servers
 To deploy a server with goblin, boot the [Arch installer](https://www.archlinux.org/download/) and run the following:
 
 ```
-curl -sLo kickstart https://git.io/goblin
+curl -sLo kickstart https://git.io/goblin-bootstrap
 bash kickstart
 ```
 

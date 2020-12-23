@@ -1,3 +1,3 @@
 ---
-masterless::frequency: 30min
+serverless::frequency: 30min
 hostname::domain: a-rwx.org

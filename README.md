@@ -2,7 +2,6 @@ goblin
 =========
 
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://tldrlegal.com/license/mit-license)
-[![Build Status](https://img.shields.io/travis/com/halyard/goblin.svg)](https://travis-ci.com/halyard/goblin)
 
 Puppet configurations for my servers
 

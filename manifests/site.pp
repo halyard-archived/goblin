@@ -1,4 +1,4 @@
-if $::operatingsystem == :archlinuxx {
+if $::operatingsystem == 'archlinux' {
   Service {
     provider => systemd
   }

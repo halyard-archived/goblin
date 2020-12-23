@@ -43,6 +43,17 @@ sed -i 's/^#en_US.UTF-8/en_US.UTF-8/' /mnt/etc/locale.gen
 arch-chroot /mnt locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
+echo "Enable basic networking"
+arch-chroot /mnt systemctl enable systemd-networkd
+arch-chroot /mnt systemctl enable systemd-resolved
+cat > /mnt/etc/systemd/network/default.network <<EOF
+[Match]
+Name=en*
+
+[Network]
+DHCP=yes
+EOF
+
 echo 'Setting the password'
 password="$(head -c256 /dev/urandom | md5sum | head -c24)"
 echo "root:$password" | arch-chroot /mnt chpasswd

@@ -13,4 +13,4 @@ end
 
 hmod 'serverless', '0.2.1'
 hmod 'hostname', '0.1.1'
-hmod 'openssh', '0.0.2'
+hmod 'openssh', '0.0.3'

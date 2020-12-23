@@ -28,10 +28,11 @@ pacstrap /mnt base base-devel grub puppet git linux linux-firmware vim lvm2
 genfstab -p /mnt >> /mnt/etc/fstab
 
 echo 'Enabling lvm2 for mkinitcpio'
-sed -i 's/^HOOKS="base udev/& lvm2/' /mnt/etc/mkinitcpio.conf
+sed -i 's/^HOOKS=(base udev/& lvm2/' /mnt/etc/mkinitcpio.conf
 arch-chroot /mnt mkinitcpio -P
 
 echo 'Setting up GRUB'
+sed -i 's/^GRUB_PRELOAD_MODULES="\(.*\)"$/GRUB_PRELOAD_MODULES="\1 lvm"/' /mnt/etc/default/grub
 arch-chroot /mnt grub-install --recheck /dev/sda
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 

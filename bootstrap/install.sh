@@ -14,8 +14,8 @@ pvcreate /dev/sda1
 vgcreate vg1 /dev/sda1
 
 echo 'Setting up LVs'
-lvcreate -L 10G -Wy -n root vg1
-lvcreate -L 1G -Wy -n swap vg1
+lvcreate -L 10G -Wy --yes -n root vg1
+lvcreate -L 1G -Wy --yes -n swap vg1
 mkfs.ext4 /dev/vg1/root
 mkswap /dev/vg1/swap
 

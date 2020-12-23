@@ -59,6 +59,7 @@ password="$(head -c256 /dev/urandom | md5sum | head -c24)"
 echo "root:$password" | arch-chroot /mnt chpasswd
 
 echo 'Bootstrap goblin'
+sed -i 's/Arch Linux/ArchLinux/' /mnt/etc/os-release
 curl -sLo /mnt/root/kickstart https://git.io/halyard-kickstart
 arch-chroot /mnt bash /root/kickstart
 

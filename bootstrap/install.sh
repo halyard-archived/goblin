@@ -10,7 +10,7 @@ timedatectl set-ntp true
 
 echo 'Setting up devices'
 parted -s /dev/sda 'mklabel msdos' 'unit %' 'mkpart primary 0 100'
-pvcreate /dev/sda1
+pvcreate --force /dev/sda1
 vgcreate vg1 /dev/sda1
 
 echo 'Setting up LVs'

@@ -7,3 +7,4 @@ if $::operatingsystem == 'archlinux' {
 include serverless
 include hostname
 include openssh
+include pacman::automaticupgrades

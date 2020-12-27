@@ -1,0 +1,12 @@
+classes:
+  - fancontrol
+fancontrol::fancontrol_config: |
+  INTERVAL=10
+  DEVPATH=hwmon0=devices/pci0000:00/0000:00:14.3 hwmon7=devices/pci0000:00/0000:00:1f.3/i2c-0/0-002f
+  DEVNAME=hwmon0=intel5500 hwmon7=w83795adg
+  FCTEMPS=hwmon7/device/pwm1=hwmon0/temp1_input
+  FCFANS= hwmon7/device/pwm1=hwmon7/device/fan4_input
+  MINTEMP=hwmon7/device/pwm1=70
+  MAXTEMP=hwmon7/device/pwm1=80
+  MINSTART=hwmon7/device/pwm1=150
+  MINSTOP=hwmon7/device/pwm1

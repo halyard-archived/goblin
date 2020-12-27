@@ -8,5 +8,7 @@ defaults:
 hierarchy:
 - name: "Common Settings"
   path: "common.yaml"
+- name: "Hardware Settings"
+  path: "board/%{facts.boardproductname}.yaml"
 - name: "MAC Specific Settings"
   path: "mac/%{facts.networking.mac}.yaml"

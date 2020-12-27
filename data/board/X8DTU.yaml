@@ -6,8 +6,8 @@ fancontrol::fancontrol_config: |
   DEVNAME=hwmon0=intel5500 hwmon7=w83795adg
   FCTEMPS=hwmon7/device/pwm1=hwmon0/temp1_input
   FCFANS= hwmon7/device/pwm1=hwmon7/device/fan4_input
-  MINTEMP=hwmon7/device/pwm1=70
-  MAXTEMP=hwmon7/device/pwm1=80
+  MINTEMP=hwmon7/device/pwm1=80
+  MAXTEMP=hwmon7/device/pwm1=85
   MINSTART=hwmon7/device/pwm1=150
   MINSTOP=hwmon7/device/pwm1=0
 

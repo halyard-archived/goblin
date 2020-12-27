@@ -9,4 +9,5 @@ fancontrol::fancontrol_config: |
   MINTEMP=hwmon7/device/pwm1=70
   MAXTEMP=hwmon7/device/pwm1=80
   MINSTART=hwmon7/device/pwm1=150
-  MINSTOP=hwmon7/device/pwm1
+  MINSTOP=hwmon7/device/pwm1=0
+

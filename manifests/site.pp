@@ -8,3 +8,7 @@ include serverless
 include hostname
 include openssh
 include pacman::automaticupgrades
+
+if $::boardproductname == 'X8DTU' {
+  include fancontrol
+}

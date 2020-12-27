@@ -8,5 +8,4 @@ include serverless
 include hostname
 include openssh
 include pacman::automaticupgrades
-
-hiera_include(classes)
+lookup('classes', Array[String], 'unique').include

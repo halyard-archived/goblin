@@ -10,4 +10,4 @@ include openssh
 include pacman::automaticupgrades
 include ntp
 
-lookup('classes', Array[String], 'unique').include
+lookup('classes', Array[String], 'unique', []).include

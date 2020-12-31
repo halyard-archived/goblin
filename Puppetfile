@@ -13,7 +13,7 @@ end
 
 hmod 'serverless', '0.2.1'
 hmod 'hostname', '0.1.1'
-hmod 'openssh', '0.0.10'
+hmod 'openssh', '0.0.11'
 hmod 'pacman', '0.0.2'
 hmod 'fancontrol', '0.0.6'
 hmod 'ntp', '0.0.1'

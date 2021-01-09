@@ -9,9 +9,18 @@ ping -c1 -W1 8.8.8.8
 timedatectl set-ntp true
 
 echo 'Setting up devices'
-parted -s /dev/sda 'mklabel msdos' 'unit %' 'mkpart primary 0 100'
-pvcreate --force /dev/sda1
-vgcreate vg1 /dev/sda1
+BLOCK="$(lsblk | grep disk | grep -v archiso | awk '{print $1}')"
+if [[ "$BLOCK" == "sda" ]] ; then
+    PARTITION="${BLOCK}2"
+elif [[ "$BLOCK" == "nvme0n1" ]] ; then
+    PARTITION="${BLOCK}p2"
+else
+    echo "Found bad block device!"
+    exit 1
+fi
+parted -s "/dev/$BLOCK" 'mklabel gpt' 'mkpart efi 1MiB 512MiB' 'mkpart lvm 512MiB 100%' 'set 1 esp on'
+pvcreate --force "/dev/${PARTITION}"
+vgcreate vg1 "/dev/${PARTITION}"
 
 echo 'Setting up LVs'
 lvcreate -L 10G -Wy --yes -n root vg1
@@ -33,7 +42,7 @@ arch-chroot /mnt mkinitcpio -P
 
 echo 'Setting up GRUB'
 sed -i 's/^GRUB_PRELOAD_MODULES="\(.*\)"$/GRUB_PRELOAD_MODULES="\1 lvm"/' /mnt/etc/default/grub
-arch-chroot /mnt grub-install --recheck /dev/sda
+arch-chroot /mnt grub-install --recheck "/dev/$BLOCK"
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 
 echo 'Set basic locale settings'

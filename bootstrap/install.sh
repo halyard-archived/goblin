@@ -11,14 +11,14 @@ timedatectl set-ntp true
 echo 'Setting up devices'
 BLOCK="$(lsblk | grep disk | grep -v archiso | awk '{print $1}')"
 if [[ "$BLOCK" == "sda" ]] ; then
-    PARTITION="${BLOCK}2"
+    PARTITION="${BLOCK}3"
 elif [[ "$BLOCK" == "nvme0n1" ]] ; then
-    PARTITION="${BLOCK}p2"
+    PARTITION="${BLOCK}p3"
 else
     echo "Found bad block device!"
     exit 1
 fi
-parted -s "/dev/$BLOCK" 'mklabel gpt' 'mkpart efi 1MiB 512MiB' 'mkpart lvm 512MiB 100%' 'set 1 esp on'
+parted -s "/dev/$BLOCK" 'mklabel gpt' 'mkpart efi 1MiB 510MiB' 'mkpart bios 510MiB 512MiB' 'mkpart lvm 512MiB 100%' 'set 1 esp on' 'set 2 bios_grub on'
 pvcreate --force "/dev/${PARTITION}"
 vgcreate vg1 "/dev/${PARTITION}"
 

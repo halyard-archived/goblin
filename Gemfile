@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'puppet', '~> 7.1.0'
-gem 'librarian-puppet', '~> 3.0.0'
+gem 'puppet', '~> 7.12.0'
+gem 'librarian-puppet', '~> 3.0.1'
 
 group :development do
-  gem 'puppet-lint', '~> 2.4.2'
-  gem 'puppetlabs_spec_helper', '~> 2.15.0'
+  gem 'puppet-lint', '~> 2.5.2'
+  gem 'puppetlabs_spec_helper', '~> 4.0.1'
 end

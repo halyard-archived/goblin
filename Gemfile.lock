@@ -33,7 +33,7 @@ GEM
     multi_json (1.15.0)
     multipart-post (2.1.1)
     pathspec (1.0.0)
-    puppet (7.12.0)
+    puppet (7.12.1)
       concurrent-ruby (~> 1.0)
       deep_merge (~> 1.0)
       facter (> 2.0.1, < 5)
@@ -89,7 +89,7 @@ PLATFORMS
 
 DEPENDENCIES
   librarian-puppet (~> 3.0.1)
-  puppet (~> 7.12.0)
+  puppet (~> 7.12.1)
   puppet-lint (~> 2.5.2)
   puppetlabs_spec_helper (~> 4.0.1)
 

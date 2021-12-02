@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'puppet', '~> 7.12.0'
+gem 'puppet', '~> 7.12.1'
 gem 'librarian-puppet', '~> 3.0.1'
 
 group :development do
